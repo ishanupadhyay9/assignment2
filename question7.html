@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form (No Table)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+      
+        .form-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr; 
+            gap: 10px 15px; 
+            align-items: center;
+        }
+
+        .form-grid-wide {
+            grid-column: 1 / -1; 
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 10px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        .form-actions {
+            grid-column: 1 / -1; 
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin-right: 10px;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form action="#" method="POST" enctype="multipart/form-data">
+    <div class="form-grid">
+
+        <label>Title</label>
+        <div class="radio-group">
+            <input type="radio" name="title" id="mr" value="Mr">
+            <label for="mr">Mr.</label>
+
+            <input type="radio" name="title" id="mrs" value="Mrs">
+            <label for="mrs">Mrs.</label>
+
+            <input type="radio" name="title" id="ms" value="Ms">
+            <label for="ms">Ms.</label>
+        </div>
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" required>
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname">
+
+        <label for="mail1">Mail Address1</label>
+        <input type="text" id="mail1" name="mail1">
+
+        <label for="mail2">Mail Address2</label>
+        <input type="text" id="mail2" name="mail2">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+
+        <label for="state">State</label>
+        <select id="state" name="state">
+            <option value="Gujarat">Gujarat</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+        </select>
+
+        <label for="zip">Zip</label>
+        <input type="text" id="zip" name="zip">
+
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mobile">Mobile</label>
+        <input type="text" id="mobile" name="mobile" placeholder="+91">
+
+        <label>Languages Known</label>
+        <div class="checkbox-group">
+            <div>
+                <input type="checkbox" id="gujarati" name="languages" value="Gujarati">
+                <label for="gujarati">Gujarati</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hindi" name="languages" value="Hindi">
+                <label for="hindi">Hindi</label>
+            </div>
+            <div>
+                <input type="checkbox" id="english" name="languages" value="English">
+                <label for="english">English</label>
+            </div>
+            <div>
+                <input type="checkbox" id="marathi" name="languages" value="Marathi">
+                <label for="marathi">Marathi</label>
+            </div>
+        </div>
+
+        <label for="info">Additional Information</label>
+        <textarea id="info" name="info" rows="3" placeholder="Optional"></textarea>
+
+   
+        <div class="form-actions">
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

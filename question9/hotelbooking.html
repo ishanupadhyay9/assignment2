@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            overflow-x:hidden
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #d9534f;
+        }
+        form {
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        a{
+            text-decoration: none;
+        }
+        header {
+            display: flex;
+            flex-direction: row;
+        width: 100vw;
+        margin-bottom: 20px;
+            background-color: #d9534f;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative; left: -20px; margin-top: -2px;" >
+        <a href="home.html" > <div style="margin-right: 30px; padding: 4px; background-color: antiquewhite; color:darkslategray; font-size: medium; border-radius: 10%; text-decoration: none;">Home</div></a>    
+        <a href="gallery.html"> <div style="margin-right: 30px; padding: 4px; background-color: antiquewhite; color:darkslategray; font-size: medium; border-radius: 10%; text-decoration: none;">Gallery</div></a>     
+        <a href="heritage.html"> <div style="margin-right: 30px; padding: 4px; background-color: antiquewhite; color:darkslategray; font-size: medium; border-radius: 10%; text-decoration: none;">Heritage</div></a>     
+
+        
+     Book Hotels</header>
+    <div class="container">
+        <h1>Hotel Booking Form</h1>
+        <form action="#" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="room">Room Type:</label>
+            <select id="room" name="room" required>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <label for="requests">Special Requests:</label>
+            <textarea id="requests" name="requests" rows="4"></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>
